@@ -35,6 +35,7 @@ class LoginUserForm(forms.Form):
 
 
 class AddUserForm(forms.ModelForm):
+#    title = forms.ChoiceFied(choices=((1, '罗宾汉'), (2, '田伯光'),), validators=MaxValueValidator(2))
     class Meta:
         model = UserInfo
         fields = ('username','password','email','nickname', 'role', 'is_active')

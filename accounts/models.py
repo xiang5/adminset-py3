@@ -9,7 +9,8 @@ class PermissionList(models.Model):
     name = models.CharField(max_length=64)
     url = models.CharField(max_length=255)
 
-    def __unicode__(self):
+#    def __unicode__(self):
+    def str(self):
         return '%s(%s)' % (self.name, self.url)
 
 
@@ -18,7 +19,8 @@ class RoleList(models.Model):
     # permission = models.ManyToManyField(PermissionList, null=True, blank=True)
     permission = models.ManyToManyField(PermissionList, blank=True)
 
-    def __unicode__(self):
+#    def __unicode__(self):
+    def str(self):
         return self.name
 
 
